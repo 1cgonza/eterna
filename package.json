@@ -13,9 +13,6 @@
     "socket.io": "^2.3.0",
     "twit": "^2.2.11"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
   },
