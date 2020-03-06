@@ -1,0 +1,28 @@
+{
+  "name": "eterna",
+  "version": "0.0.1",
+  "author": "Juan Camilo González Jiménez <info@juancgonzalez.com> (http://juancgonzalez.com)",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sentiment": "^5.0.2",
+    "socket.io": "^2.3.0",
+    "twit": "^2.2.11"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
