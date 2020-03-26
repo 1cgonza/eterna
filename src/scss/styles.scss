@@ -1,0 +1,170 @@
+/*==========  NORMALIZE  ==========*/
+* {
+  box-sizing: border-box;
+}
+header,
+canvas,
+.eterna-title {
+  display: block;
+}
+
+/*==========  GENERAL  ==========*/
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace;
+  font-weight: 400;
+  color: #fff;
+  background-color: #000;
+}
+
+a {
+  color: #d9d70d;
+  background-color: transparent;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    outline: 0;
+    color: #b7b312;
+  }
+}
+
+.big-btn {
+  font-size: 2em;
+}
+
+/*====================================
+=            LANDING PAGE            =
+====================================*/
+#landing {
+  transition: left 2s, opacity 1s, transform 2s;
+  opacity: 0;
+  background-color: #000;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  padding: 3em;
+  max-height: 90%;
+  overflow-y: auto;
+
+  .eterna-title {
+    width: 50%;
+    margin: 3em auto;
+    padding-top: 2em;
+  }
+
+  .instructions {
+    font-size: 2em;
+  }
+
+  .main-credits {
+    .by {
+      display: inline-block;
+      margin: 0 2em;
+    }
+  }
+  .secondary-credits {
+    font-size: 0.85em;
+  }
+}
+
+#stage {
+  transition: opacity 2s, transform 2s;
+}
+
+/*-----  End of LANDING PAGE  ------*/
+
+/*==========  HEADER  ==========*/
+header {
+  width: 100%;
+  text-align: center;
+  // z-index: 9999;
+
+  a,
+  span,
+  #terms {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #terms {
+    a {
+      margin: 0.5em;
+      padding: 0.5em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+#about {
+  padding: 15px;
+  float: right;
+  font-size: 30px;
+  background-color: #fff;
+  color: #404040;
+  text-decoration: none;
+  margin-right: 10px;
+
+  &:hover {
+    color: #909090;
+  }
+}
+
+/*==========  MAIN  ==========*/
+#main {
+  background-color: white;
+  position: absolute;
+
+  #eterna {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #mask {
+    position: absolute;
+    z-index: 2;
+
+    img {
+      height: 100%;
+      width: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+#template,
+#mandala {
+  position: absolute;
+  right: 0;
+}
+#text-container {
+  font-size: 1.2vw;
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  padding-right: 1em;
+  word-break: break-word;
+  hyphens: auto;
+
+  .description {
+    background-color: #fff;
+    color: #000;
+    font-size: 0.9em;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+}
+
+#pulse {
+  position: absolute;
+  bottom: 0;
+}

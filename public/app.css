@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+header,
+canvas,
+.eterna-title {
+  display: block;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace;
+  font-weight: 400;
+  color: #fff;
+  background-color: #000;
+}
+a {
+  color: #d9d70d;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+  color: #b7b312;
+}
+.big-btn {
+  font-size: 2em;
+}
+#landing {
+  transition: left 2s, opacity 1s, transform 2s;
+  opacity: 0;
+  background-color: #000;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  padding: 3em;
+  max-height: 90%;
+  overflow-y: auto;
+}
+#landing .eterna-title {
+  width: 50%;
+  margin: 3em auto;
+  padding-top: 2em;
+}
+#landing .instructions {
+  font-size: 2em;
+}
+#landing .main-credits .by {
+  display: inline-block;
+  margin: 0 2em;
+}
+#landing .secondary-credits {
+  font-size: 0.85em;
+}
+#stage {
+  transition: opacity 2s, transform 2s;
+}
+header {
+  width: 100%;
+  text-align: center;
+}
+header a,
+header span,
+header #terms {
+  display: inline-block;
+  vertical-align: middle;
+}
+header #terms a {
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+#about {
+  padding: 15px;
+  float: right;
+  font-size: 30px;
+  background-color: #fff;
+  color: #404040;
+  text-decoration: none;
+  margin-right: 10px;
+}
+#about:hover {
+  color: #909090;
+}
+#main {
+  background-color: white;
+  position: absolute;
+}
+#main #eterna {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+#main #mask {
+  position: absolute;
+  z-index: 2;
+}
+#main #mask img {
+  height: 100%;
+  width: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#template,
+#mandala {
+  position: absolute;
+  right: 0;
+}
+#text-container {
+  font-size: 1.2vw;
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  padding-right: 1em;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+#text-container .description {
+  background-color: #fff;
+  color: #000;
+  font-size: 0.9em;
+}
+#text-container p {
+  margin: 0.5em 0;
+}
+#pulse {
+  position: absolute;
+  bottom: 0;
+}

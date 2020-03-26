@@ -12,33 +12,111 @@
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon" />
     <link href="http://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="/style.css" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="..:: Eterna ::.." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eterna.glitch.me/" />
+    <meta property="og:image" content="" />
+    <meta
+      property="og:description"
+      content="'..:: Eterna ::.. is an interactive data driven animation by Juan Camilo González & music by Ross A. Williams. Interact @ https://eterna.glitch.me/"
+    />
+    <meta property="og:site_name" content="..:: Eterna ::.." />
 
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/script.js" defer></script>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@1cgonza" />
+    <meta name="twitter:creator" content="@1cgonza" />
+    <meta name="twitter:title" content="..:: Eterna ::.." />
+    <meta
+      name="twitter:description"
+      content="'..:: Eterna ::.. is an interactive data driven animation by Juan Camilo González & music by Ross A. Williams. Interact @ https://eterna.glitch.me/"
+    />
+    <meta name="twitter:image" content="" />
+
+    <link rel="stylesheet" href="/app.css" />
   </head>
   <body>
     <header>
-      <h1>A Dream of the Future</h1>
+      <span>Tracking:</span>
+      <div id="terms"></div>
+      <a id="about" href="#" target="_self">?</a>
     </header>
 
-    <main>
-      <h2>Oh hi,</h2>
+    <div id="landing">
+      <div class="instructions">
+        ..:: Instructions ::..
 
-      <p>Tell me your hopes and dreams:</p>
+        <p>Tweet using any of the keywords you see above as part of your message.</p>
+      </div>
+      <img class="eterna-title" src="/images/eterna-title.svg" alt="" />
+      <div class="credits">
+        <div class="main-credits">
+          <div class="by">
+            <span>.:: by ::..</span>
+            <p>
+              <a
+                href="http://juancgonzalez.com/"
+                title="Juan Camilo Gonz&aacute;lez Website"
+                target="_blank"
+                rel="noopener"
+                >Juan Camilo Gonz&aacute;lez</a
+              >
+            </p>
+          </div>
+          <div class="by">
+            <span>..:: music ::..</span>
+            <p>
+              <a href="http://fluidsound.com/" title="Ross A. Williams Website" target="_blank" rel="noopener"
+                >Ross A. Williams</a
+              >
+            </p>
+          </div>
+        </div>
+        <span>..:: thanks ::..</span>
+        <div class="secondary-credits">
+          <p>Vibeke Sorensen, Randall Packer, Menting Yu, Lau Kheng Hock, Kumar Chockanathan</p>
+          <span>..:: Produced at ::..</span>
+          <p>School of Art, Design &amp; Media - Nanyang Technological Univeristy - Singapore</p>
+        </div>
+      </div>
+    </div>
 
-      <section class="dreams">
-        <ul id="dreams">
-          <em>loading dreams&hellip;</em>
-        </ul>
-      </section>
+    <main id="stage">
+      <div id="main">
+        <div id="mask">
+          <img src="/images/mask.png" alt="" />
+        </div>
+        <canvas id="eterna"></canvas>
+      </div>
+
+      <canvas id="template"></canvas>
+      <canvas id="mandala"></canvas>
+      <canvas id="pulse"></canvas>
+
+      <div id="text-container">
+        <p>
+          <span class="description">Sentiment score:</span>
+          <span id="score" class="value"></span>
+        </p>
+        <p>
+          <span class="description">On:</span>
+          <span id="time" class="value"></span>
+        </p>
+        <p>
+          <span class="description">By:</span>
+          <span id="user" class="value"></span>
+        </p>
+        <p>
+          <span class="description">From:</span>
+          <span id="location" class="value"></span>
+        </p>
+        <p>
+          <span class="description">Message:</span>
+          <span id="msg" class="value"></span>
+        </p>
+      </div>
     </main>
-
-    <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>

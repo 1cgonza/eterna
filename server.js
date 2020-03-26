@@ -1,31 +1,20 @@
 const express = require('express');
 const http = require('http');
+// only do if not running on glitch
+if (!process.env.PROJECT_DOMAIN) {
+  // read environment variables (only necessary locally, not on Glitch)
+  require('dotenv').config();
+}
 
 const app = express();
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-const server = http.createServer(app);
-const io = require('socket.io')(server);
-require('./sockets/base')(io);
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-// make all the files in 'public' available
-// https://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-// https://expressjs.com/en/starter/basic-routing.html
 app.get('/', (request, response) => {
   response.sendFile(__dirname + '/views/index.html');
 });
-
-// // listen for requests :)
-// const listener = app.listen(process.env.PORT, () => {
-//   console.log('Your app is listening on port ' + listener.address().port);
-// });
 
 function normalizePort(val) {
   const port = parseInt(val, 10);
@@ -57,5 +46,15 @@ function onError(error) {
 function onListening() {
   const addr = server.address();
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-  console.log('Listening on ' + bind);
+  console.log('..:: Listening on ' + bind);
 }
+
+const server = http.createServer(app);
+const io = require('socket.io')(server, {
+  pingInterval: 60000
+});
+require('./sockets/base')(io);
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
