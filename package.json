@@ -13,7 +13,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "sentiment": "^5.0.2",
-    "socket.io": "^2.4.0",
+    "socket.io": "^2.5.0",
     "twit": "^2.2.11"
   },
   "repository": {
